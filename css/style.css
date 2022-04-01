@@ -1,24 +1,24 @@
 /* FONTS  */
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
 /* GLOBAL  */
-html {
-    --tmdbDarkBlue: 3,37,65;
-}
-
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 /* HEADER  */
 .header {
     text-align: center;
-    height: 15rem;
+    height: 25rem;
+    padding-bottom: 8rem;
+    background-color: antiquewhite;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-family: 'Lora', serif;
 }
 
 .header img {
@@ -28,17 +28,87 @@ body {
 }
 
 
-
-
 /* FOOTER  */
-footer {
-    /* background-color: #032540; */
-    background-image: radial-gradient(at 30% top, #63707a 0%, rgba(var(--tmdbDarkBlue), 1) 70%);
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+input {
+    width: 77vw;
+    height: 1.5rem;
+    margin: 2rem auto;
+    display: block;
+    font-size: 1.2rem;
+    border-radius: 3rem;
+    padding: 0.3rem 1.5rem;
+    border: -internal-light-dark(black, white);
 }
 
 
+
+
+
+/* MAIN  */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 20rem;
+    box-shadow: 5px 5px 3px #d1d1d1;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.images {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0;
+}
+
+.title, .description, .date {
+    padding: 0 1rem;
+}
+
+figcaption .title {
+    font-size: 1.5rem;
+    font-family: 'Lora', serif;
+}
+
+.date, .rating {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.rating {
+    font-size: 1.2rem;
+    background-color: #faebd7;
+    margin: 0;
+    padding: 0.7rem;
+}
+
+
+/* FOOTER  */
+
+.footer {
+    padding: 2rem 0;
+    background-color: rgb(176, 208, 209);
+}
+
+.footer h3 {
+    font-family: 'Lora', serif;
+    text-align: center;
+}
 
 

@@ -7,7 +7,12 @@
     <title>Films de la semaine</title>
 
     <!-- css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- ajax api  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
     <header class="header">
@@ -15,14 +20,28 @@
         <h1>Les films de la semaine !</h1>
     </header>
 
-    <main>
-        <section id="api"></section>
+    <aside>
+        <input type="text" placeholder="Trouver un film">
+    </aside>
+
+    <main id="main">
+        <section class="cards">
+            <!-- <figure class="card">
+                <img class="images" src="" alt="image du film de la semaine">
+                <figcaption>
+                    <h2 class="title"></h2>
+                    <p class="description"></p>
+                    <p class="date"></p>
+                    <p class="rating"></p>
+                </figcaption>
+            </figure> -->
+        </section>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <h3>Coded with love by Ony Lalaina Valérie <br><i class="fa-solid fa-heart"></i></h3>
     </footer>
     
-    <script src="js/main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
