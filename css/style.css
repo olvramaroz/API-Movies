@@ -1,0 +1,44 @@
+/* FONTS  */
+
+
+
+
+/* GLOBAL  */
+html {
+    --tmdbDarkBlue: 3,37,65;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* HEADER  */
+.header {
+    text-align: center;
+    height: 15rem;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* FOOTER  */
+footer {
+    /* background-color: #032540; */
+    background-image: radial-gradient(at 30% top, #63707a 0%, rgba(var(--tmdbDarkBlue), 1) 70%);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
