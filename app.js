@@ -8,7 +8,6 @@ const main = document.getElementById('main');
 
 getMovies(apiURL);
 
-
 function getMovies(url) {
     fetch(url)
     .then(res => res.json())
@@ -44,3 +43,4 @@ function showMovies(data) {
         main.appendChild(movieCard);
     })
 }
+

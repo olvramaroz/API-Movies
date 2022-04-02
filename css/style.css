@@ -13,12 +13,8 @@ body {
 .header {
     text-align: center;
     height: 25rem;
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
     background-color: antiquewhite;
-}
-
-.header h1 {
-    font-size: 3rem;
 }
 
 .header img {
@@ -29,7 +25,6 @@ body {
 
 
 /* SEARCH BAR  */
-
 input {
     width: 77vw;
     height: 1.5rem;
@@ -49,7 +44,9 @@ main {
     justify-content: center;
 }
 
-.cards {margin: 0 1rem;}
+.cards {
+    margin: .5rem 1rem;
+}
 
 .card {
     width: 15rem;
@@ -74,7 +71,7 @@ main {
 }
 
 .title, .description, .date {
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .title {
@@ -111,6 +108,7 @@ main {
 .title-rating {
     display: flex;
     justify-content: space-between;
+    max-height: 65px;
 }
 
 .back {
@@ -133,12 +131,14 @@ main {
 
 
 /* FOOTER  */
-
 .footer {
     padding: 2rem 0;
     background-color: rgb(176, 208, 209);
     text-align: center;
 }
+
+
+
 
 
 
