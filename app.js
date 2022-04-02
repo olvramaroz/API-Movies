@@ -13,7 +13,6 @@ function getMovies(url) {
     fetch(url)
     .then(res => res.json())
     .then(data => {
-        // console.log('mes données :', data.results);
         showMovies(data.results);
     })
 }
@@ -28,15 +27,19 @@ function showMovies(data) {
         const {title, poster_path, overview, release_date, vote_average} = movie;
 
         movieCard.innerHTML = `
-            <figure class="card">
-                <img class="images" src="${imagePoster+poster_path}" alt="${title}">
-                <figcaption>
-                    <h2 class="title">${title}</h2>
+            <section class="card">
+                <section class="front">
+                    <img class="images" src="${imagePoster+poster_path}" alt="${title}">
+                    <div class="title-rating">
+                        <h2 class="title">${title}</h2>
+                        <p class="rating">${vote_average}</p>
+                    </div>
+                </section>
+                <section class="back">
                     <p class="description">${overview}</p>
                     <p class="date">Date de sortie : ${release_date}</p>
-                    <p class="rating">Moyenne générale : ${vote_average}</p>
-                </figcaption>
-            </figure>
+                </section>
+            </section>
         `
         main.appendChild(movieCard);
     })

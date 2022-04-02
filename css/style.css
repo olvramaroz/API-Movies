@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lora', serif;
 }
 
 /* HEADER  */
@@ -18,7 +19,6 @@ body {
 
 .header h1 {
     font-size: 3rem;
-    font-family: 'Lora', serif;
 }
 
 .header img {
@@ -28,7 +28,7 @@ body {
 }
 
 
-/* FOOTER  */
+/* SEARCH BAR  */
 
 input {
     width: 77vw;
@@ -42,9 +42,6 @@ input {
 }
 
 
-
-
-
 /* MAIN  */
 main {
     display: flex;
@@ -52,8 +49,10 @@ main {
     justify-content: center;
 }
 
+.cards {margin: 0 1rem;}
+
 .card {
-    width: 20rem;
+    width: 15rem;
     box-shadow: 5px 5px 3px #d1d1d1;
     text-align: center;
     margin-bottom: 2rem;
@@ -62,15 +61,12 @@ main {
     border-top-right-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+    position: relative;
 }
 
 .images {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -78,24 +74,61 @@ main {
 }
 
 .title, .description, .date {
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
-figcaption .title {
+.title {
     font-size: 1.5rem;
-    font-family: 'Lora', serif;
+    margin: 0;
+    text-align: center;
 }
 
 .date, .rating {
     font-weight: bold;
     text-transform: capitalize;
+    margin: 0;
+    padding: 0.7rem;
 }
 
 .rating {
-    font-size: 1.2rem;
-    background-color: #faebd7;
-    margin: 0;
-    padding: 0.7rem;
+    font-size: 1.8rem;
+}
+
+.front, .back {
+    /* position: absolute; */
+    backface-visibility: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s linear;
+}
+
+.front {
+    background-color: antiquewhite;
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.title-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: antiquewhite;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
 }
 
 
@@ -104,11 +137,8 @@ figcaption .title {
 .footer {
     padding: 2rem 0;
     background-color: rgb(176, 208, 209);
-}
-
-.footer h3 {
-    font-family: 'Lora', serif;
     text-align: center;
 }
+
 
 
