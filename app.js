@@ -6,6 +6,11 @@ const apiURL = baseURL + trendingWeekly + apiKey;
 const imagePoster = 'https://image.tmdb.org/t/p/w500'
 const main = document.getElementById('main');
 
+const form = document.getElementById('form');
+const search = document.getElementById('search');
+const searchURL = 'https://api.themoviedb.org/3/search/movie?api_key=b1e3eec6badf8d3df7fd027c7d4dd4f1&query=';
+
+
 getMovies(apiURL);
 
 function getMovies(url) {
@@ -43,4 +48,20 @@ function showMovies(data) {
         main.appendChild(movieCard);
     })
 }
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const searchValue = search.value;
+
+    if(searchValue && searchValue !=='') {
+        getMovies(searchURL+searchValue);
+    } else {
+        getMovies(apiURL);
+    }
+})
+
+
+
 
